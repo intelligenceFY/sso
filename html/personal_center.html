@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>personal_center</title>
+    <link rel="stylesheet" type="text/css" href="../css/personal_center.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box">
+            <div class="top">
+                <h1>用户身份统一认证中心</h1>
+            </div>
+            <div class="center">
+                <div id="tab_bar">
+                    <ul>
+                        <li id="tab1" onclick="myclick(1)" style="background-color: #ccc;color: black;">
+                            个人资料
+                        </li>
+                        <li id="tab2" onclick="myclick(2)" style=" border-right: 1px solid #ccc;">
+                            登录日志
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab_css" id="tab1_content" style="display: block">
+                    <div class="formbox">
+                        <div class="title1">
+                            <h3>编辑个人资料</h3>
+                        </div>
+                        <form class="form1">
+                            <span>
+                                <label for="username">用户名：</label>
+                                <span>
+                                    <input type="text" placeholder="请输入用户名" class="username">
+                                    <span></span>
+                            </span>
+                            </span>
+                            <span>
+                                <label for="username">密码：&nbsp;&nbsp;&nbsp;</label>
+                                <span>
+                                    <input type="password" placeholder="*密码长度2~30位，字母区分大小写" class="password">
+                                    <span style="color: #666;"></span>
+                            </span>
+                            </span>
+                            <div class="runs-paginator-flex-container">
+                                <input type="submit" value="保存" class="storage">
+                                <input type="reset" value="重置" class="reset">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="tab_css" id="tab2_content">
+                    <div class="tablebox">
+                        <div class="title2">
+                            <h3>我的日志</h3>
+                            <div class="pull_left">
+                                <label for="timef">查询时间</label>
+                            </div>
+                            <input type="date" value="2019-11-26" id="timef" />
+                            <div class="pull_right">
+                                <label for="timel">至 &nbsp;</label>
+                            </div>
+                            <input type="date" id="timel" />
+                            <input type="button" value="查询" class="search">
+                        </div>
+                        <div class="use">
+
+                        </div>
+                        <div class="table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>用户名</th>
+                                        <th>登入时间</th>
+                                        <th>登出时间</th>
+                                    </tr>
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>183.64.61.56</td>
+                                        <td>2019-11-26 19:11:07</td>
+                                        <td>2019-11-26 10:14:38</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/personal_center.js"></script>
+</body>
+
+</html>
