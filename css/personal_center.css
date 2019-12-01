@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 565px;
+    height: 580px;
     width: 1000px;
     align-items: center;
 }
@@ -114,7 +114,7 @@ body {
     flex: 1 1 auto;
     flex-direction: row-reverse;
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 240px;
     flex-direction: row;
     justify-content: space-between;
@@ -123,18 +123,20 @@ body {
 }
 
 .username,
-.password {
+.password,
+.loginname,
+.identity {
     align-self: center;
     height: 30px;
     width: 250px;
 }
 
-.username {
-    margin-top: 50px;
+.loginname {
+    margin-top: 40px;
 }
 
 .password {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .storage,
@@ -184,6 +186,7 @@ body {
 
 .table {
     width: 100%;
+    text-align: center;
 }
 
 .pull_left {
@@ -205,6 +208,11 @@ table {
 
 tr {
     height: 40px;
+}
+
+th {
+    background-color: #175288;
+    font-size: 16px;
 }
 
 tr:nth-child(2n) {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>personal_center</title>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.pagination.min.css">
     <link rel="stylesheet" type="text/css" href="../css/personal_center.css">
 </head>
 
@@ -33,26 +34,35 @@
                         <div class="title1">
                             <h3>编辑个人资料</h3>
                         </div>
-                        <form class="form1">
+                        <div class="form1">
+                            <span>
+                                <label for="loginname">登录名：</label>
+                                <input type="text" readonly="readonly" class="loginname" id="loginname" onblur="checkloginname()">
+                                <div style="margin-left: 50px;margin-bottom: 5px;height: 14px;" id="pspan1"></div>
+                            </span>
                             <span>
                                 <label for="username">用户名：</label>
-                                <span>
-                                    <input type="text" placeholder="请输入用户名" class="username">
-                                    <span></span>
+                                <input type="text" class="username" id="username" onblur="checkuser()">
+                                <div style="margin-left: 50px;margin-bottom: 5px;height: 14px;" id="pspan2"></div>
                             </span>
+
+                            <span>
+                                    <label for="identity">&nbsp;&nbsp;&nbsp;身份：</label>
+                                    <select class="identity" id="identity">
+                                        <option value="teacher">教师</option>
+                                        <option value="student">学生</option>
+                                    </select>
                             </span>
                             <span>
-                                <label for="username">密码：&nbsp;&nbsp;&nbsp;</label>
-                                <span>
-                                    <input type="password" placeholder="*密码长度2~30位，字母区分大小写" class="password">
-                                    <span style="color: #666;"></span>
-                            </span>
+                                    <label for="pws">&nbsp;&nbsp;&nbsp;密码：</label>
+                                    <input type="password" class="password" id="psw" placeholder="如需修改请填写密码">
+                                    <div style="margin-left: 50px;margin-bottom: 5px;height: 14px;" id="pspan4"></div>
                             </span>
                             <div class="runs-paginator-flex-container">
-                                <input type="submit" value="保存" class="storage">
+                                <input type="submit" value="保存" class="storage" id="storage" onclick="checkinfo2()">
                                 <input type="reset" value="重置" class="reset">
                             </div>
-                        </form>
+                        </div>
                     </div>
 
                 </div>
@@ -74,15 +84,14 @@
                         <div class="use">
 
                         </div>
-                        <div class="table">
+                        <div class="table" id="table">
                             <table>
                                 <tbody>
                                     <tr>
                                         <th>用户名</th>
                                         <th>登入时间</th>
-                                        <th>登出时间</th>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>183.64.61.56</td>
                                         <td>2019-11-26 19:11:07</td>
                                         <td>2019-11-26 10:14:38</td>
@@ -112,7 +121,7 @@
                                         <td>183.64.61.56</td>
                                         <td>2019-11-26 19:11:07</td>
                                         <td>2019-11-26 10:14:38</td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
 
@@ -124,6 +133,8 @@
         </div>
     </div>
     <script type="text/javascript" src="../js/personal_center.js"></script>
+    <script type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/jquery.pagination.min.js"></script>
 </body>
 
 </html>

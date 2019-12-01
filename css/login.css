@@ -75,7 +75,7 @@ body {
     letter-spacing: 4px;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,14 +97,14 @@ form {
 }
 
 .password {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .runs-paginator-flex-container {
     flex: 1 1 auto;
     flex-direction: row-reverse;
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 240px;
     flex-direction: row;
     justify-content: space-between;
