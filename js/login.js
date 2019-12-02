@@ -49,6 +49,11 @@ function ajax() {
         type: 'post',
         dataType: 'json',
         url: 'http://172.33.6.116:8080/login',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+
         data: {
             "loginName": loginName,
             "loginPassword": loginPassword,
@@ -60,7 +65,7 @@ function ajax() {
                 alert(json.code);         
                 console.log(json.data);
                 sessionStorage.setItem('ticketToken', info.ticketToken); 
-                windo.location.href = 'personal_center.html';
+                window.location.href = 'personal_center.html';
 
             } else if (json.code == 2) {
 

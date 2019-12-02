@@ -37,7 +37,7 @@ body {
 }
 
 .center {
-    background-image: url(../images/bg.jpg);
+    /* background-image: url(../images/bg.jpg); */
     height: 50%;
     width: 1190px;
     margin-top: 20px;

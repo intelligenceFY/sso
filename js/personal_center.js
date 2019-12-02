@@ -42,6 +42,9 @@ function ajax(ticketToken) {
         type: 'get',
         dataType: 'json',
         url: 'http://172.33.6.116:8080/person/' + ticketToken,
+        xhrFields: {
+            withCredentials: true
+        },
         success: function(json) {
             var info = json;
             console.log(info);   
@@ -57,7 +60,7 @@ function ajax(ticketToken) {
             load2(info2, info3);
         },
         error: function(json) {
-            this.loginLoading = false;
+            // this.loginLoading = false;
             alert("页面错误" + json);
         },
     })
@@ -154,9 +157,14 @@ function checkinfo2() {
 }
 
 function update_user() {
+    console.log(loginname1.value + '555', password1.value, username1.value);
     $.ajax({
         type: "post",
-        url: "url: 'http://172.33.6.116:8080/update_user" + ticketToken, //请求url
+        dataType: 'json',
+        url: 'http://172.33.6.116:8080/update', //请求url
+        xhrFields: {
+            withCredentials: true
+        },
         data: {
             "loginName": loginname1.value,
             "loginPassword": password1.value,
@@ -172,7 +180,7 @@ function update_user() {
             }
         },
         error: function(json) {
-            this.loginLoading = false;
+            // this.loginLoading = false;
             alert("页面错误");
         }
     })
